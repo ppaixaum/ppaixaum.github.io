@@ -1,0 +1,17 @@
+<nav class="nav has-shadow">
+	<div class="nav-left">
+		<a href="{{ site.url }}/" class="nav-item main-title"></a>
+	</div>
+	
+	<span class="nav-toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</span>
+
+	<div class="nav-right nav-menu">
+	{% for link in site.links %}
+		<a href="{{ site.utl }}{{ link.url }}" class="nav-item">{{ link.title }}</a>
+	{% endfor %}
+	</div>
+</nav>

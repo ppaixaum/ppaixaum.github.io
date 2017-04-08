@@ -1,0 +1,35 @@
+--- 
+layout: compress 
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+{% include head.html %}
+<body>
+    <!--[if lt IE 9]>
+       <div class="notification">
+           <p>Este site não fornece suporte para browsers obsoletos. Por favor <a href="http://www.browsehappy.com" target="_blank">Atualize aqui</a> seu navegador.</p>
+       </div>
+    <![endif]-->
+    <main>
+        <section class="hero is-primary is-bold is-fullheight has-text-centered">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">{{ page.title }}</h1>
+                    <a href="{{ page.download_link }}" class="button is-primary is-inverted is-outlined is-large">
+                        <span class="icon">
+                            <i class="icon-download-cloud"></i>
+                        </span>
+                        <span>FAZER DOWNLOAD</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-foot">
+                <div class="container">
+                   {{ site.foot }}
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{{ " /assets/js/main.min.js " | prepend: site.baseurl }}"></script>
+</body>
+</html>

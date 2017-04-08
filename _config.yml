@@ -1,0 +1,30 @@
+title: "Cheap Downloads | Compartilhando Conhecimento"
+description: "Nossa missão é levar conhecimento gratuito para todos."
+baseurl: ''  
+url: 'https://cheapdownloads.ga'
+
+markdown: kramdown
+permalink: /:title/
+gems: ['jekyll-paginate']
+
+paginate: 15
+paginate_path: "/pagina:num/"
+
+links:
+- title: Home
+  url: /
+- title: Sobre
+  url: /sobre
+- title: Pedidos
+  url: /pedidos
+
+btc: '1GTBRj1xDLiD3LASXXWtdUnf1y8Li3oNRR'
+
+foot: '<p>Ajude na <strong>aquisição de novos cursos</strong> doando qualquer valor em Bitcoin.<br><b>Bitcoin: 1GTBRj1xDLiD3LASXXWtdUnf1y8Li3oNRR</b></p>'
+exclude: ['package.json', 'src', 'node_modules', 'gulpfile.js']
+
+# html minify
+compress_html:
+    clippings: all
+    comments: ["<!-- ", " -->"]
+    profile: false

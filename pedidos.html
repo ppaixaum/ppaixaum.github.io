@@ -1,0 +1,47 @@
+--- 
+layout: default 
+title: Pedidos
+permalink: /pedidos/ 
+---
+
+<section class="hero is-primary is-bold has-text-centered">
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">Faça um pedido</h1>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="content">
+			<h2 class="subtitle">Quer algum conteúdo em específico?</h2>
+			<p>Nos envie uma mensagem caso queira pedir algum conteúdo em específico. Críticas e sugestões também serão bem vindas e ficaremos felizes em responder.</p>
+
+			<form action="" class="form" id="form">
+				<div class="field">
+					<label for="iNome" class="label">Nome:</label>
+					<input type="text" name="nNome" id="iNome" class="input" placeholder="Digite seu nome..." required>
+				</div>
+				<div class="field">
+					<label for="iEmail" class="label">Email:</label>
+					<input type="email" name="nEmail" id="iEmail" class="input" placeholder="Digite seu email..." required>
+				</div>
+				<div class="field">
+					<label for="iMsg" class="label">Mensagem:</label>
+					<textarea name="nMsg" id="iMsg" class="textarea" placeholder="Digite sua mensagem..." required></textarea>
+				</div>
+				<div class="field">
+					<div class="notification is-primary" style="display: none">
+					  Mensagem enviada com sucesso. Responderemos em breve...
+					</div>
+					<div class="notification is-danger" style="display: none">
+					  Erro ao enviar a mensagem. Por favor atualize a página e tente novamente...
+					</div>
+				</div>
+				<button class="button is-primary">Enviar</button>
+			</form>
+		</div>
+	</div>
+</section>
+

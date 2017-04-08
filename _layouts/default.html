@@ -1,0 +1,20 @@
+--- 
+layout: compress 
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+{% include head.html %}
+<body>
+    <!--[if lt IE 9]>
+       <div class="notification">
+           <p>Este site não fornece suporte para browsers obsoletos. Por favor <a href="http://www.browsehappy.com" target="_blank">Atualize aqui</a> seu navegador.</p>
+       </div>
+    <![endif]-->
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="{{ "/assets/js/main.min.js" | prepend: site.baseurl }}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.tag
+	pointer-events: none
+	
+.main-title
+	font-weight: 900
+	font-size: 1.125rem
+	&:after
+		content: 'CD'
+		@media only screen and (min-width: 768px)
+			content: 'CHEAP DOWNLOADS'
+	
+.main-card
+	margin-bottom: 2.5rem
+	transition: all 0.25s
+	&:hover
+		box-shadow: 5px 5px 25px rgba(0,0,0,0.2)
+	&:last-child
+		margin-bottom: 0
+	
+.main-post-date
+	font-size: 0.875rem
+	font-style: italic

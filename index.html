@@ -1,0 +1,82 @@
+--- 
+layout: default 
+---
+
+<section class="hero is-primary is-medium has-text-centered is-bold">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">CHEAP DOWNLOADS</h1>
+            <p class="subtitle">compartilhando conhecimento</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {% if page.url == "/" %}
+        <div class="notification">
+            <button class="delete"></button>
+            <span class="icon">
+                <i class="icon-bell"></i>
+            </span>
+            Em breve teremos todos os cursos da plataforma <strong>Alura</strong>!
+        </div>
+        {% endif %}
+        {% for post in paginator.posts %}
+            <article class="card main-card">
+                <div class="card-content">
+                    <div class="content">
+                        <h2 class="subtitle"><a href="{{ post.url }}" style="color: inherit;" target="_blank">{{ post.title }}</a></h2>
+                        <p>{{ post.description }}</p>
+                        <p>
+                            <span class="tag"><b>{{ post.server }}</b></span>
+                            <span class="tag"><b>Tamanho</b>: {{ post.size }}</span>
+                        </p>
+                        <span class="main-post-date is-pulled-right">
+                            {% include post-date.html %}
+                        </span>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span class="tag is-{% if post.status %}success{% else %}danger{% endif %}">status: {% if post.status %}on{% else %}off{% endif %}</span>
+                    </p>
+                    <p class="card-footer-item">
+                        <a href="{{ post.url }}" class="button is-outlined" target="_blank">
+                            <span class="icon">
+                                <i class="icon-download-cloud"></i>
+                            </span>
+                            <span>Download</span>
+                        </a>
+                    </p>
+                </footer>
+            </article>
+        {% endfor %}
+        
+        <!-- Pagination links -->
+        <nav class="pagination is-centered is-medium">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="pagination-previous">
+                    <span class="icon">
+                        <i class="icon-angle-double-left"></i>
+                    </span>
+                    <span>Anterior</span>
+                </a>
+            {% else %}
+                <a href="#0" class="pagination-previous" disabled>Anterior</a>
+            {% endif %}
+            
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="pagination-next">
+                    <span>Próximo</span>
+                    <span class="icon">
+                        <i class="icon-angle-double-right"></i>
+                    </span>
+                </a>
+            {% else %}
+                <a href="#0" class="pagination-next" disabled>Próximo</a>
+            {% endif %}
+        </nav>   
+        <!-- End Pagination links -->
+    </div>
+</section>
