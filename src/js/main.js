@@ -12,8 +12,8 @@
 
         
         $.ajax({
-        	url: 'https://formspree.io/paulopaixao@mail.com',
-        	method: 'post',
+            url: 'https://formspree.io/paulopaixao@mail.com',
+        	type: 'POST',
         	data: {
         	  Nome: nome,
         	  Email: email,
@@ -24,14 +24,14 @@
         	},
         	dataType: 'json',
         	success: function() {
-        		$('.is-success').slideDown('fast');
+        		$('.is-success').show();
         	},
         	error: function() {
-        		$('.is-danger').slideDown('fast');						
+        		$('.is-danger').show();						
         	},
         	beforeSend: function() {
         		$('.button').addClass('is-loading');
-        		$('.notification').slideUp('fast');
+        		$('.notification').hide();
         	},
         	complete: function() {
         		$('.button').removeClass('is-loading');
